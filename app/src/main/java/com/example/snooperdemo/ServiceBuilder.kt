@@ -11,12 +11,12 @@ object ServiceBuilder {
     private var okHttpClientBuilder: OkHttpClient.Builder = OkHttpClient.Builder()
 
     fun <T> build(clazz: Class<T>?): T {
-        val builderRetrofit = Retrofit.Builder()
+        val retrofitBuilder = Retrofit.Builder()
             .baseUrl("https://avatars.dicebear.com/")
             .addConverterFactory(GsonConverterFactory.create())
             .client(okHttpClientBuilder.build())
 
         val client = okHttpClientBuilder.addInterceptor(SnooperInterceptor()).build()
-        return builderRetrofit.client(client).build().create(clazz)
+        return retrofitBuilder.client(client).build().create(clazz)
     }
 }

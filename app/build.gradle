@@ -30,7 +30,7 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.1.0'
     implementation 'com.squareup.retrofit2:retrofit:2.3.0'
     implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
-    debugImplementation 'com.github.jainsahab:Snooper-Okhttp:1.5.4'
+    debugImplementation 'com.github.jainsahab:Snooper-Okhttp:1.5.5-SNAPSHOT'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.0'
